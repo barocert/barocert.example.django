@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block contents %}
+    <div id="content">
+        <p class="heading1">Barocert Kakao Service jsp Example.</p>
+        <br/>
+        <fieldset class="fieldset1">
+            <legend>전자서명 API</legend>
+            <ul>
+                <li><a href="KakaocertService/RequestESign">RequestESign</a> - 전자서명 요청(단건)</li>
+                <li><a href="KakaocertService/BulkRequestESign">BulkRequestESign</a> - 전자서명 요청(다건)</li>
+                <li><a href="KakaocertService/GetESignState">GetESignState</a> - 전자서명 상태확인(단건)</li>
+                <li><a href="KakaocertService/GetBulkESignState">GetBulkESignState</a> - 전자서명 상태확인(다건)</li>
+                <li><a href="KakaocertService/VerifyESign">VerifyESign</a> - 전자서명 검증(단건)</li>
+                <li><a href="KakaocertService/BulkVerifyESign">BulkVerifyESign</a> - 전자서명 검증(다건)</li>
+            </ul>
+        </fieldset>
+
+        <br/>
+        <fieldset class="fieldset1">
+            <legend>본인인증 API</legend>
+            <ul>
+                <li><a href="KakaocertService/RequestVerifyAuth">RequestVerifyAuth</a> - 본인인증 요청</li>
+                <li><a href="KakaocertService/GetVerifyAuthState">GetVerifyAuthState</a> - 본인인증 상태확인</li>
+                <li><a href="KakaocertService/VerifyAuth">VerifyAuth</a> - 본인인증 검증</li>
+            </ul>
+        </fieldset>
+
+        <br/>
+        <fieldset class="fieldset1">
+            <legend>출금동의 API</legend>
+            <ul>
+                <li><a href="KakaocertService/RequestCMS">RequestCMS</a> - 출금동의 요청</li>
+                <li><a href="KakaocertService/GetCMSState">GetCMSState</a> - 출금동의 상태확인</li>
+                <li><a href="KakaocertService/VerifyCMS">VerifyCMS</a> - 출금동의 검증</li>
+            </ul>
+        </fieldset>
+    </div>
+{% endblock contents %}
