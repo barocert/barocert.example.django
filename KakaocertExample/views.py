@@ -28,9 +28,9 @@ def requestIdentityHandler(request):
         requestObj = KakaoIdentity(
             # 수신자 정보
             # 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-            receiverHP = kakaocertService._encrypt('01054437896'),
-            receiverName = kakaocertService._encrypt('최상혁'),
-            receiverBirthday = kakaocertService._encrypt('19880301'),
+            receiverHP = kakaocertService._encrypt('01012341234'),
+            receiverName = kakaocertService._encrypt('홍길동'),
+            receiverBirthday = kakaocertService._encrypt('19700101'),
             ci = kakaocertService._encrypt(''),
             
             # 인증요청 메시지 제목 - 최대 40자
@@ -95,9 +95,9 @@ def requestSignHandler(request):
         requestObj = KakaoSign(
             # 수신자 정보
             # 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-            receiverHP = kakaocertService._encrypt('01054437896'),
-            receiverName = kakaocertService._encrypt('최상혁'),
-            receiverBirthday = kakaocertService._encrypt('19880301'),
+            receiverHP = kakaocertService._encrypt('01012341234'),
+            receiverName = kakaocertService._encrypt('홍길동'),
+            receiverBirthday = kakaocertService._encrypt('19700101'),
             ci = kakaocertService._encrypt(''),
             
             # 인증요청 메시지 제목 - 최대 40자
@@ -179,9 +179,9 @@ def requestMultiSignHandler(request):
 
             # 수신자 정보
             # 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-            receiverHP = kakaocertService._encrypt('01054437896'),
-            receiverName = kakaocertService._encrypt('최상혁'),
-            receiverBirthday = kakaocertService._encrypt('19880301'),
+            receiverHP = kakaocertService._encrypt('01012341234'),
+            receiverName = kakaocertService._encrypt('홍길동'),
+            receiverBirthday = kakaocertService._encrypt('19700101'),
             ci = kakaocertService._encrypt(''),
             
             # 인증요청 메시지 제목 - 최대 40자
@@ -253,9 +253,9 @@ def requestCMSHandler(request):
         requestObj = KakaoCMS(
               # 수신자 정보
             # 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-            receiverHP = kakaocertService._encrypt('01054437896'),
-            receiverName = kakaocertService._encrypt('최상혁'),
-            receiverBirthday = kakaocertService._encrypt('19880301'),
+            receiverHP = kakaocertService._encrypt('01012341234'),
+            receiverName = kakaocertService._encrypt('홍길동'),
+            receiverBirthday = kakaocertService._encrypt('19700101'),
             ci = kakaocertService._encrypt(''),
             
             # 인증요청 메시지 제목 - 최대 40자
@@ -272,7 +272,7 @@ def requestCMSHandler(request):
             # 출금계좌 예금주명 - 최대 100자
             bankAccountName = kakaocertService._encrypt('예금주명 입력란'),
             # 출금계좌 예금주 생년월일 - 8자
-            bankAccountBirthday = kakaocertService._encrypt('19880301'),
+            bankAccountBirthday = kakaocertService._encrypt('19700101'),
             # 출금유형
             # CMS - 출금동의용, FIRM - 펌뱅킹, GIRO - 지로용
             bankServiceType = kakaocertService._encrypt('CMS'),
