@@ -5,28 +5,20 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^RequestESign$', views.requestESignHandler, name='RequestESign'),
+    url(r'^RequestIdentity$', views.requestIdentityHandler, name='RequestIdentity'),
+    url(r'^GetIdentityStatus$', views.getIdentityStatusHandler, name='GetIdentityStatus'),
+    url(r'^VerifyIdentity$', views.verifyIdentityHandler, name='VerifyIdentity'),
 
-    url(r'^BulkReqeustESign$', views.bulkReqeustESignHandler, name='BulkReqeustESign'),
+    url(r'^RequestSign$', views.requestSignHandler, name='RequestSign'),
+    url(r'^GetSignStatus$', views.getSignStatusHandler, name='GetSignStatus'),
+    url(r'^VerifySign$', views.verifySignHandler, name='VerifySign'),
 
-    url(r'^GetESignState$', views.getESignStateHandler, name='GetESignState'),
-
-    url(r'^GetBulkESignState$', views.getBulkESignStateHandler, name='GetBulkESignState'),
-
-    url(r'^VerifyESign$', views.verifyESignHandler, name='VerifyESign'),
-
-    url(r'^BulkVerifyESign$', views.bulkVerifyESignHandler, name='BulkVerifyESign'),
-
-    url(r'^RequestVerifyAuth$', views.requestVerifyAuthHandler, name='RequestVerifyAuth'),
-
-    url(r'^GetVerifyAuthState$', views.getVerifyAuthStateHandler, name='GetVerifyAuthState'),
-
-    url(r'^VerifyAuth$', views.verifyAuthHandler, name='VerifyAuth'),
+    url(r'^RequestMultiSign$', views.requestMultiSignHandler, name='RequestMultiSign'),
+    url(r'^GetMultiSignStatus$', views.getMultiSignStateHandler, name='GetMultiSignStatus'),
+    url(r'^VerifyMultiSign$', views.verifyMultiSignHandler, name='VerifyMultiSign'),
 
     url(r'^RequestCMS$', views.requestCMSHandler, name='RequestCMS'),
-
-    url(r'^GetCMSState$', views.getCMSStateHandler, name='GetCMSState'),
-
+    url(r'^GetCMSStatus$', views.getCMSStatusHandler, name='GetCMSStatus'),
     url(r'^VerifyCMS$', views.verifyCMSHandler, name='VerifyCMS'),
 
 ]
