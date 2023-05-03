@@ -13,10 +13,10 @@ import os
 """
 
 # 링크아이디
-LinkID = "LINKHUB_BC"
+LinkID = "TESTER"
 
 # 발급받은 비밀키, 유출에 주의하시기 바랍니다.
-SecretKey = "npCAl0sHPpJqlvMbrcBmNagrxkQ74w9Sl0A+M++kMCE="
+SecretKey = "SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I="
 
 # 인증토큰 IP제한기능 사용여부, 권장(True)
 IPRestrictOnOff = True
