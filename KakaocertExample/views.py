@@ -19,6 +19,7 @@ kakaocertService.UseStaticIP = settings.UseStaticIP
 kakaocertService.UseLocalTimeYN = settings.UseLocalTimeYN
 
 # 카카오톡 사용자에게 본인인증 전자서명을 요청합니다.
+# https://developers.barocert.com/reference/kakao/java/identity/api#RequestIdentity
 def requestIdentityHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -56,6 +57,7 @@ def requestIdentityHandler(request):
         return render(request, 'exception.html', {'code': KE.code, 'message': KE.message})
 
 # 본인인증 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
+# https://developers.barocert.com/reference/kakao/java/identity/api#GetIdentityStatus
 def getIdentityStatusHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -72,6 +74,7 @@ def getIdentityStatusHandler(request):
 
 # 본인인증 요청시 반환된 접수아이디를 통해 본인인증 서명을 검증합니다. 
 # 검증하기 API는 완료된 전자서명 요청당 1회만 요청 가능하며, 사용자가 서명을 완료후 유효시간(10분)이내에만 요청가능 합니다.
+# https://developers.barocert.com/reference/kakao/java/identity/api#VerifyIdentity
 def verifyIdentityHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -87,6 +90,7 @@ def verifyIdentityHandler(request):
         return render(request, 'exception.html', {'code': KE.code, 'message': KE.message})
 
 # 카카오톡 사용자에게 전자서명을 요청합니다.(단건)
+# https://developers.barocert.com/reference/kakao/java/sign/api-single#RequestSign
 def requestSignHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -128,6 +132,7 @@ def requestSignHandler(request):
         return render(request, 'exception.html', {'code': KE.code, 'message': KE.message})
 
 # 전자서명 요청시 반환된 접수아이디를 통해 서명을 검증합니다. (단건)
+# https://developers.barocert.com/reference/kakao/java/sign/api-single#GetSignStatus
 def getSignStatusHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -145,6 +150,7 @@ def getSignStatusHandler(request):
     
 # 전자서명 요청시 반환된 접수아이디를 통해 서명을 검증합니다. (단건)
 # 검증하기 API는 완료된 전자서명 요청당 1회만 요청 가능하며, 사용자가 서명을 완료후 유효시간(10분)이내에만 요청가능 합니다
+# https://developers.barocert.com/reference/kakao/java/sign/api-single#VerifySign
 def verifySignHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -160,6 +166,7 @@ def verifySignHandler(request):
         return render(request, 'exception.html', {'code': KE.code, 'message': KE.message})
 
 # 카카오톡 사용자에게 전자서명을 요청합니다.(복수)
+# https://developers.barocert.com/reference/kakao/java/sign/api-multi#RequestMultiSign
 def requestMultiSignHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -213,6 +220,7 @@ def requestMultiSignHandler(request):
         return render(request, 'exception.html', {'code': KE.code, 'message': KE.message})
 
 # 전자서명 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다. (복수)
+# https://developers.barocert.com/reference/kakao/java/sign/api-multi#GetMultiSignStatus
 def getMultiSignStateHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -229,6 +237,7 @@ def getMultiSignStateHandler(request):
 
 # 전자서명 요청시 반환된 접수아이디를 통해 서명을 검증합니다. (복수)
 # 검증하기 API는 완료된 전자서명 요청당 1회만 요청 가능하며, 사용자가 서명을 완료후 유효시간(10분)이내에만 요청가능 합니다.
+# https://developers.barocert.com/reference/kakao/java/sign/api-multi#VerifyMultiSign
 def verifyMultiSignHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -243,9 +252,8 @@ def verifyMultiSignHandler(request):
     except BarocertException as KE:
         return render(request, 'exception.html', {'code': KE.code, 'message': KE.message})
 
-
-
 # 카카오톡 사용자에게 자동이체 출금동의 전자서명을 요청합니다.
+# https://developers.barocert.com/reference/kakao/java/cms/api#RequestCMS
 def requestCMSHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -295,6 +303,7 @@ def requestCMSHandler(request):
         return render(request, 'exception.html', {'code': KE.code, 'message': KE.message})
 
 # 자동이체 출금동의 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
+#https://developers.barocert.com/reference/kakao/java/cms/api#GetCMSStatus
 def getCMSStatusHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
@@ -311,6 +320,7 @@ def getCMSStatusHandler(request):
 
 # 자동이체 출금동의 요청시 반환된 접수아이디를 통해 서명을 검증합니다.
 # 검증하기 API는 완료된 전자서명 요청당 1회만 요청 가능하며, 사용자가 서명을 완료후 유효시간(10분)이내에만 요청가능 합니다.
+# https://developers.barocert.com/reference/kakao/java/cms/api#VerifyCMS
 def verifyCMSHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
