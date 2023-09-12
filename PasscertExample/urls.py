@@ -13,14 +13,12 @@ urlpatterns = [
     url(r'^GetSignStatus$', views.getSignStatusHandler, name='GetSignStatus'),
     url(r'^VerifySign$', views.verifySignHandler, name='VerifySign'),
 
-    url(r'^RequestMultiSign$', views.requestMultiSignHandler, name='RequestMultiSign'),
-    url(r'^GetMultiSignStatus$', views.getMultiSignStateHandler, name='GetMultiSignStatus'),
-    url(r'^VerifyMultiSign$', views.verifyMultiSignHandler, name='VerifyMultiSign'),
-
     url(r'^RequestCMS$', views.requestCMSHandler, name='RequestCMS'),
     url(r'^GetCMSStatus$', views.getCMSStatusHandler, name='GetCMSStatus'),
     url(r'^VerifyCMS$', views.verifyCMSHandler, name='VerifyCMS'),
 
+    url(r'^RequestLogin$', views.requestLoginHandler, name='RequestLogin'),
+    url(r'^GetLoginStatus$', views.getLoginStatusHandler, name='GetLoginStatus'),
     url(r'^VerifyLogin$', views.verifyLoginHandler, name='VerifyLogin'),
 
 ]

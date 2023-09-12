@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block contents %}
+<div id="content">
+    <p class="heading1">Barocert Service Django Example.</p>
+    <br />
+    <fieldset class="fieldset1">
+        <legend>{{ request.path }}</legend>
+        <ul>
+            <li>txID (트랜잭션 아이디) : {{ result.txID }}</li>
+            <li>State (상태) : {{ result.state }}</li>
+            <li>SignedData (전자서명 데이터 전문) : {{ result.signedData }}</li>
+            <li>Ci (연계정보) : {{ result.ci }}</li>
+        </ul>
+    </fieldset>
+</div>
+{% endblock contents %}
