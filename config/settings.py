@@ -3,9 +3,9 @@
 import os
 
 """
- - 업데이트 일자 : 2023-06-14
+ - 업데이트 일자 : 2023-09-13
  - 연동 기술지원 연락처 : 1600-9854
- - 연동 기술지원 이메일 : dev@linkhubcorp.com
+ - 연동 기술지원 이메일 : code@linkhubcorp.com
 
  <테스트 연동개발 준비사항>
  - 링크아이디(LinkID)와 비밀키(SecretKey)를 메일로 발급받은 인증정보를 참조하여 변경합니다.
@@ -18,13 +18,13 @@ LinkID = "TESTER"
 # 발급받은 비밀키, 유출에 주의하시기 바랍니다.
 SecretKey = "SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I="
 
-# 인증토큰 IP제한기능 사용여부, 권장(True)
+# 인증토큰 IP제한기능 사용여부, True-사용, False-미사용, 기본값(True)
 IPRestrictOnOff = True
 
-# 카카오써트 API 서비스 고정 IP 사용여부, True-사용, False-미사용, 기본값(False)
+# 바로써트 API 서비스 고정 IP 사용여부, True-사용, False-미사용, 기본값(False)
 UseStaticIP = False
 
-# 로컬시스템 시간 사용여부 True-사용, False-미사용, 기본값(True)
+# 로컬시스템 시간 사용여부, True-사용, False-미사용, 기본값(True)
 UseLocalTimeYN = True
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

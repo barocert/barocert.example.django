@@ -4,17 +4,17 @@ from config import settings
 from barocert import KakaoCMS, KakaocertService, KakaoIdentity, BarocertException, \
     KakaoSign, KakaoMultiSign, KakaoMultiSignTokens
 
-# config/settings.py 인증정보(LinkID, SecretKey)를 이용해
+# config/settings.py 인증정보(LinkID, SecretKey)를 이용해 설정
 # KakaocertService 객체 인스턴스 생성
 kakaocertService = KakaocertService(settings.LinkID, settings.SecretKey)
 
-# 인증토큰 IP제한기능 사용여부, 권장(True)
+# 인증토큰 IP제한기능 사용여부, True-사용, False-미사용, 기본값(True)
 kakaocertService.IPRestrictOnOff = settings.IPRestrictOnOff
 
 # 카카오써트 API 서비스 고정 IP 사용여부, True-사용, False-미사용, 기본값(False)
 kakaocertService.UseStaticIP = settings.UseStaticIP
 
-# 로컬시스템 시간 사용여부 True-사용, False-미사용, 기본값(True)
+# 로컬시스템 시간 사용여부, True-사용, False-미사용, 기본값(True)
 kakaocertService.UseLocalTimeYN = settings.UseLocalTimeYN
 
 # 카카오톡 이용자에게 본인인증을 요청합니다.
@@ -351,7 +351,7 @@ def verifyLoginHandler(request):
         # 간편로그인 요청시 반환받은 트랜잭션 아이디
         txId = '02304200230400000010000000000023'
 
-        result = kakaocertService.verifyLogin(clientCode, receiptId)
+        result = kakaocertService.verifyLogin(clientCode, txId)
 
         return render(request, 'kakaocert/verifyLogin.html', {'result': result})
     except BarocertException as KE:
