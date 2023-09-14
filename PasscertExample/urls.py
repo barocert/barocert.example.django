@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-from django.conf.urls import url
+try: 
+    from django.conf.urls import url
+except:
+    from django.urls import re_path as url
 
 from . import views
 
