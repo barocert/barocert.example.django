@@ -7,7 +7,7 @@ from barocert import PassCMS, PassIdentity, PassLogin, PassSign, \
 
 # config/settings.py 인증정보(LinkID, SecretKey)를 이용해 설정
 # PasscertService 객체 인스턴스 생성
-passcertService = passcertService(settings.LinkID, settings.SecretKey)
+passcertService = PasscertService(settings.LinkID, settings.SecretKey)
 
 # 인증토큰 IP제한기능 사용여부, True-사용, False-미사용, 기본값(True)
 passcertService.IPRestrictOnOff = settings.IPRestrictOnOff
