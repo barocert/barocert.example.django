@@ -21,4 +21,5 @@ from config.views import Index
 urlpatterns = [
     url(r'^$', Index.as_view(), name='Index'),
     url(r'^KakaocertService/', include('KakaocertExample.urls'), name='KakaocertExample'),
+    url(r'^PasscertService/', include('PasscertExample.urls'), name='PasscertExample'),
 ]

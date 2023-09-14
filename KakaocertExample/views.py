@@ -349,7 +349,7 @@ def verifyLoginHandler(request):
         clientCode = '023040000001'
 
         # 간편로그인 요청시 반환받은 트랜잭션 아이디
-        txId = '02304200230400000010000000000023'
+        txId = '0199a61d5b-929e-4ade-97fc-554a48cf954d'
 
         result = kakaocertService.verifyLogin(clientCode, txId)
 

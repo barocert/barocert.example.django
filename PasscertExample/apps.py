@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class KakaocertexampleConfig(AppConfig):
-    name = 'KakaocertExample'
+class PasscertexampleConfig(AppConfig):
+    name = 'PasscertExample'

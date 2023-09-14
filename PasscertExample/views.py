@@ -29,11 +29,11 @@ def requestIdentityHandler(request):
         requestObj = PassIdentity(
 
             # 수신자 휴대폰번호 - 11자 (하이픈 제외)
-            receiverHP = passcertService._encrypt('01067668440'),
+            receiverHP = passcertService._encrypt('01012341234'),
             # 수신자 성명 - 80자
-            receiverName = passcertService._encrypt('정우석'),
+            receiverName = passcertService._encrypt('홍길동'),
             # 수신자 생년월일 - 8자 (yyyyMMdd)
-            receiverBirthday = passcertService._encrypt('19900911'),
+            receiverBirthday = passcertService._encrypt('19700101'),
             
             # 인증요청 메시지 제목 - 최대 40자
             reqTitle = '인증요청 메시지 제목란',
@@ -47,19 +47,19 @@ def requestIdentityHandler(request):
             token = passcertService._encrypt('본인인증요청토큰'),
             
             # 사용자 동의 필요 여부
-            userAgreementYN = True;
+            userAgreementYN = True,
             # 사용자 정보 포함 여부
-            receiverInfoYN = True;
+            receiverInfoYN = True,
 
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - Push 인증방식
-            appUseYN = False;
+            appUseYN = False,
             # ApptoApp 인증방식에서 사용
             # 통신사 유형('SKT', 'KT', 'LGU'), 대문자 입력(대소문자 구분)
-            # telcoType = 'SKT';
+            # telcoType = 'SKT',
             # ApptoApp 인증방식에서 사용
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
-            # deviceOSType = 'IOS';
+            # deviceOSType = 'IOS',
         )
 
         result = passcertService.requestIdentity(clientCode, requestObj)
@@ -102,8 +102,8 @@ def verifyIdentityHandler(request):
 
         # 검증 요청 정보 객체
         verifyObj = PassIdentityVerify(
-            receiverHP = passcertService._encrypt('01067668440'),
-            receiverName = passcertService._encrypt('정우석'),
+            receiverHP = passcertService._encrypt('01012341234'),
+            receiverName = passcertService._encrypt('홍길동'),
         )
 
         result = passcertService.verifyIdentity(clientCode, receiptId, verifyObj)
@@ -123,11 +123,11 @@ def requestSignHandler(request):
         requestObj = PassSign(
 
             # 수신자 휴대폰번호 - 11자 (하이픈 제외)
-            receiverHP = passcertService._encrypt('01067668440'),
+            receiverHP = passcertService._encrypt('01012341234'),
             # 수신자 성명 - 80자
-            receiverName = passcertService._encrypt('정우석'),
+            receiverName = passcertService._encrypt('홍길동'),
             # 수신자 생년월일 - 8자 (yyyyMMdd)
-            receiverBirthday = passcertService._encrypt('19900911'),
+            receiverBirthday = passcertService._encrypt('19700101'),
             
             # 전자서명 메시지 제목 - 최대 40자
             reqTitle = '전자서명 메시지 제목란',
@@ -146,9 +146,9 @@ def requestSignHandler(request):
             tokenType = 'URL',
             
             # 사용자 동의 필요 여부
-            userAgreementYN = True;
+            userAgreementYN = True,
             # 사용자 정보 포함 여부
-            receiverInfoYN = True;
+            receiverInfoYN = True,
 
             # 원본유형코드
             # 'AG' - 동의서, 'AP' - 신청서, 'CT' - 계약서, 'GD' - 안내서, 'NT' - 통지서, 'TR' - 약관
@@ -161,13 +161,13 @@ def requestSignHandler(request):
 
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - Push 인증방식
-            appUseYN = False;
+            appUseYN = False,
             # ApptoApp 인증방식에서 사용
             # 통신사 유형('SKT', 'KT', 'LGU'), 대문자 입력(대소문자 구분)
-            # telcoType = 'SKT';
+            # telcoType = 'SKT',
             # ApptoApp 인증방식에서 사용
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
-            # deviceOSType = 'IOS';
+            # deviceOSType = 'IOS',
         )
 
         result = passcertService.requestSign(clientCode, requestObj)
@@ -208,8 +208,8 @@ def verifySignHandler(request):
 
         # 검증 요청 정보 객체
         verifyObj = PassSignVerify(
-            receiverHP = passcertService._encrypt('01067668440'),
-            receiverName = passcertService._encrypt('정우석'),
+            receiverHP = passcertService._encrypt('01012341234'),
+            receiverName = passcertService._encrypt('홍길동'),
         )
 
         result = passcertService.verifySign(clientCode, receiptId, verifyObj)
@@ -229,11 +229,11 @@ def requestCMSHandler(request):
         requestObj = PassCMS(
 
             # 수신자 휴대폰번호 - 11자 (하이픈 제외)
-            receiverHP = passcertService._encrypt('01067668440'),
+            receiverHP = passcertService._encrypt('01012341234'),
             # 수신자 성명 - 80자
-            receiverName = passcertService._encrypt('정우석'),
+            receiverName = passcertService._encrypt('홍길동'),
             # 수신자 생년월일 - 8자 (yyyyMMdd)
-            receiverBirthday = passcertService._encrypt('19900911'),
+            receiverBirthday = passcertService._encrypt('19700101'),
             
             # 요청 메시지 제목 - 최대 40자
             reqTitle = '출금동의 메시지 제목란',
@@ -245,9 +245,9 @@ def requestCMSHandler(request):
             expireIn = 1000,
             
             # 사용자 동의 필요 여부
-            userAgreementYN = True;
+            userAgreementYN = True,
             # 사용자 정보 포함 여부
-            receiverInfoYN = True;
+            receiverInfoYN = True,
 
             # 출금은행명 - 최대 100자
             bankName = passcertService._encrypt('국민은행'),
@@ -265,13 +265,13 @@ def requestCMSHandler(request):
             
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - Push 인증방식
-            appUseYN = False;
+            appUseYN = False,
             # ApptoApp 인증방식에서 사용
             # 통신사 유형('SKT', 'KT', 'LGU'), 대문자 입력(대소문자 구분)
-            # telcoType = 'SKT';
+            # telcoType = 'SKT',
             # ApptoApp 인증방식에서 사용
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
-            # deviceOSType = 'IOS';
+            # deviceOSType = 'IOS',
         )
 
         result = passcertService.requestCMS(clientCode, requestObj)
@@ -312,11 +312,11 @@ def verifyCMSHandler(request):
 
         # 검증 요청 정보 객체
         verifyObj = PassCMSVerify(
-            receiverHP = passcertService._encrypt('01067668440'),
-            receiverName = passcertService._encrypt('정우석'),
+            receiverHP = passcertService._encrypt('01012341234'),
+            receiverName = passcertService._encrypt('홍길동'),
         )
 
-        result = passcertService.verifyCMS(clientCode, receiptId, PassCMSVerify)
+        result = passcertService.verifyCMS(clientCode, receiptId, verifyObj)
 
         return render(request, 'passcert/verifyCMS.html', {'result': result})
     except BarocertException as PE:
@@ -333,11 +333,11 @@ def requestLoginHandler(request):
         requestObj = PassLogin(
 
             # 수신자 휴대폰번호 - 11자 (하이픈 제외)
-            receiverHP = passcertService._encrypt('01067668440'),
+            receiverHP = passcertService._encrypt('01012341234'),
             # 수신자 성명 - 80자
-            receiverName = passcertService._encrypt('정우석'),
+            receiverName = passcertService._encrypt('홍길동'),
             # 수신자 생년월일 - 8자 (yyyyMMdd)
-            receiverBirthday = passcertService._encrypt('19900911'),
+            receiverBirthday = passcertService._encrypt('19700101'),
             
             # 요청 메시지 제목 - 최대 40자
             reqTitle = '간편로그인 메시지 제목란',
@@ -351,19 +351,19 @@ def requestLoginHandler(request):
             token = passcertService._encrypt('간편로그인요청토큰'),
             
             # 사용자 동의 필요 여부
-            userAgreementYN = True;
+            userAgreementYN = True,
             # 사용자 정보 포함 여부
-            receiverInfoYN = True;
+            receiverInfoYN = True,
 
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - Push 인증방식
-            appUseYN = False;
+            appUseYN = False,
             # ApptoApp 인증방식에서 사용
             # 통신사 유형('SKT', 'KT', 'LGU'), 대문자 입력(대소문자 구분)
-            # telcoType = 'SKT';
+            # telcoType = 'SKT',
             # ApptoApp 인증방식에서 사용
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
-            # deviceOSType = 'IOS';
+            # deviceOSType = 'IOS',
         )
 
         result = passcertService.requestLogin(clientCode, requestObj)
@@ -404,8 +404,8 @@ def verifyLoginHandler(request):
 
         # 검증 요청 정보 객체
         verifyObj = PassLoginVerify(
-            receiverHP = passcertService._encrypt('01067668440'),
-            receiverName = passcertService._encrypt('정우석'),
+            receiverHP = passcertService._encrypt('01012341234'),
+            receiverName = passcertService._encrypt('홍길동'),
         )
 
         result = passcertService.verifyLogin(clientCode, receiptId, verifyObj)
