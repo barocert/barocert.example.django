@@ -14,9 +14,6 @@ kakaocertService.IPRestrictOnOff = settings.IPRestrictOnOff
 # 카카오써트 API 서비스 고정 IP 사용여부, True-사용, False-미사용, 기본값(False)
 kakaocertService.UseStaticIP = settings.UseStaticIP
 
-# 로컬시스템 시간 사용여부, True-사용, False-미사용, 기본값(True)
-kakaocertService.UseLocalTimeYN = settings.UseLocalTimeYN
-
 # 카카오톡 이용자에게 본인인증을 요청합니다.
 # https://developers.barocert.com/reference/kakao/python/identity/api#RequestIdentity
 def requestIdentityHandler(request):
