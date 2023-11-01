@@ -3,7 +3,7 @@
 import os
 
 """
- - 업데이트 일자 : 2023-09-13
+ - 업데이트 일자 : 2023-10-31
  - 연동 기술지원 연락처 : 1600-9854
  - 연동 기술지원 이메일 : code@linkhubcorp.com
 
@@ -37,7 +37,7 @@ SECRET_KEY = '#(in=9bj3ixz$hm@ah^an4bw-y^y(q#0d+qy!=i8-b9cwei0w9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = '*'
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
