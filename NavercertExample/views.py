@@ -107,9 +107,9 @@ def requestSignHandler(request):
             receiverBirthday = navercertService._encrypt('19700101'),
             
             # 인증요청 메시지 제목 - 최대 40자
-            reqTitle = '전자서명(단건) 메시지 제목',
+            reqTitle = '전자서명(단건) 요청 메시지 제목',
             # 인증요청 메시지 - 최대 500자
-            reqMessage = navercertService._encrypt('전자서명(단건) 메시지'),
+            reqMessage = navercertService._encrypt('전자서명(단건) 요청 메시지'),
             # 고객센터 연락처 - 최대 12자
             callCenterNum = '1600-9854',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
@@ -205,7 +205,7 @@ def requestMultiSignHandler(request):
             # 인증요청 메시지 제목 - 최대 40자
             reqTitle = '전자서명(복수) 요청 메시지 제목',
             # 인증요청 메시지 - 최대 500자
-            reqMessage = navercertService._encrypt('전자서명(복수) 메시지'),
+            reqMessage = navercertService._encrypt('전자서명(복수) 요청 메시지'),
             # 고객센터 연락처 - 최대 12자
             callCenterNum = '1600-9854',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능

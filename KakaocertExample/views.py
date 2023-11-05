@@ -32,11 +32,11 @@ def requestIdentityHandler(request):
             receiverBirthday = kakaocertService._encrypt('19700101'),
             
             # 인증요청 메시지 제목 - 최대 40자
-            reqTitle = '인증요청 메시지 제목란',
+            reqTitle = '본인인증 요청 메시지 제목',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             # 서명 원문 - 최대 40자 까지 입력가능
-            token = kakaocertService._encrypt('본인인증요청토큰'),
+            token = kakaocertService._encrypt('본인인증 요청 원문'),
             
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - Talk Message 인증방식
@@ -105,11 +105,11 @@ def requestSignHandler(request):
             receiverBirthday = kakaocertService._encrypt('19700101'),
             
             # 인증요청 메시지 제목 - 최대 40자
-            reqTitle = '인증요청 메시지 제목란',
+            reqTitle = '전자서명(단건) 요청 메시지 제목',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             # 서명 원문 - 최대 2,800자 까지 입력가능
-            token = kakaocertService._encrypt('본인인증요청토큰'),
+            token = kakaocertService._encrypt('전자서명(단건) 요청 원문'),
             
             # 서명 원문 유형
             # TEXT - 일반 텍스트, HASH - HASH 데이터
@@ -176,9 +176,9 @@ def requestMultiSignHandler(request):
             multiSignTokens.append(
                 KakaoMultiSignTokens(
                     # 인증요청 메시지 제목 - 최대 40자
-                    reqTitle = "전자서명복수테스트",
+                    reqTitle = "전자서명(복수) 요청 메시지 제목" + str(x),
                     # 서명 원문 - 원문 2,800자 까지 입력가능
-                    token = kakaocertService._encrypt("전자서명복수테스트데이터" + str(x)) 
+                    token = kakaocertService._encrypt("전자서명(복수) 요청 원문" + str(x)) 
             )
         )  
 
@@ -193,7 +193,7 @@ def requestMultiSignHandler(request):
             receiverBirthday = kakaocertService._encrypt('19700101'),
             
             # 인증요청 메시지 제목 - 최대 40자
-            reqTitle = '인증요청 메시지 제목란',
+            reqTitle = '전자서명(복수) 요청 메시지 제목',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             
@@ -270,7 +270,7 @@ def requestCMSHandler(request):
             receiverBirthday = kakaocertService._encrypt('19700101'),
             
             # 인증요청 메시지 제목 - 최대 40자
-            reqTitle = '인증요청 메시지 제목란',
+            reqTitle = '출금동의 요청 메시지 제목',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             

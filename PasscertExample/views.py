@@ -33,15 +33,15 @@ def requestIdentityHandler(request):
             receiverBirthday = passcertService._encrypt('19700101'),
             
             # 인증요청 메시지 제목 - 최대 40자
-            reqTitle = '인증요청 메시지 제목란',
+            reqTitle = '본인인증 요청 메시지 제목',
             # 인증요청 메시지 - 최대 500자
-            reqMessage = passcertService._encrypt('인증요청 메시지'),
+            reqMessage = passcertService._encrypt('본인인증 요청 메시지'),
             # 고객센터 연락처 - 최대 12자
             callCenterNum = '1600-9854',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             # 서명 원문 - 최대 40자 까지 입력가능
-            token = passcertService._encrypt('본인인증요청토큰'),
+            token = passcertService._encrypt('본인인증 요청 원문'),
             
             # 사용자 동의 필요 여부
             userAgreementYN = True,
@@ -127,15 +127,15 @@ def requestSignHandler(request):
             receiverBirthday = passcertService._encrypt('19700101'),
             
             # 전자서명 메시지 제목 - 최대 40자
-            reqTitle = '전자서명 메시지 제목란',
+            reqTitle = '전자서명 요청 메시지 제목',
             # 전자서명 메시지 - 최대 500자
-            reqMessage = passcertService._encrypt('전자서명 메시지'),
+            reqMessage = passcertService._encrypt('전자서명 요청 메시지'),
             # 고객센터 연락처 - 최대 12자
             callCenterNum = '1600-9854',
             # 전자서명 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             # 서명 원문 - 최대 2,800자 까지 입력가능
-            token = passcertService._encrypt('전자서명요청토큰'),
+            token = passcertService._encrypt('전자서명 요청 원문'),
             
             # 서명 원문 유형
             # 'TEXT' - 일반 텍스트, 'HASH' - HASH 데이터, 'URL' - URL 데이터
@@ -233,9 +233,9 @@ def requestCMSHandler(request):
             receiverBirthday = passcertService._encrypt('19700101'),
             
             # 요청 메시지 제목 - 최대 40자
-            reqTitle = '출금동의 메시지 제목란',
+            reqTitle = '출금동의 요청 메시지 제목',
             # 요청 메시지 - 최대 500자
-            reqMessage = passcertService._encrypt('출금동의 메시지'),
+            reqMessage = passcertService._encrypt('출금동의 요청 메시지'),
             # 고객센터 연락처 - 최대 12자
             callCenterNum = '1600-9854',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
@@ -337,15 +337,15 @@ def requestLoginHandler(request):
             receiverBirthday = passcertService._encrypt('19700101'),
             
             # 요청 메시지 제목 - 최대 40자
-            reqTitle = '간편로그인 메시지 제목란',
+            reqTitle = '간편로그인 요청 메시지 제목',
             # 요청 메시지 - 최대 500자
-            reqMessage = passcertService._encrypt('간편로그인 메시지'),
+            reqMessage = passcertService._encrypt('간편로그인 요청 메시지'),
             # 고객센터 연락처 - 최대 12자
             callCenterNum = '1600-9854',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             # 서명 원문 - 최대 40자 까지 입력가능
-            token = passcertService._encrypt('간편로그인요청토큰'),
+            token = passcertService._encrypt('간편로그인 요청 원문'),
             
             # 사용자 동의 필요 여부
             userAgreementYN = True,
