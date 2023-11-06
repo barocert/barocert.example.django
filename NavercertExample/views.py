@@ -216,13 +216,13 @@ def requestMultiSignHandler(request):
             
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - Talk Message 인증방식
-            appUseYN = True,
+            #appUseYN = True,
 
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
-            deviceOSType = 'ANDROID',
+            #deviceOSType = 'ANDROID',
 
             # App to App 방식 이용시, 에러시 호출할 URL
-            returnURL = 'navercert://sign'
+            #returnURL = 'navercert://sign'
         )
 
         result = navercertService.requestMultiSign(clientCode, requestObj)
