@@ -211,7 +211,7 @@ def requestMultiSignHandler(request):
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
             
-            # 개별문서 등록 - 최대 20 건
+            # 개별문서 등록 - 최대 50 건
             tokens = multiSignTokens,
             
             # AppToApp 인증요청 여부
