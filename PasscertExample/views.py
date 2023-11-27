@@ -75,9 +75,9 @@ def getIdentityStatusHandler(request):
         clientCode = '023040000001'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000012'
+        receiptID = '02304200230400000010000000000012'
 
-        result = passcertService.getIdentityStatus(clientCode, receiptId)
+        result = passcertService.getIdentityStatus(clientCode, receiptID)
 
         return render(request, 'passcert/getIdentityStatus.html', {'result': result})
     except BarocertException as PE:
@@ -95,7 +95,7 @@ def verifyIdentityHandler(request):
         clientCode = '023040000001'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000012'
+        receiptID = '02304200230400000010000000000012'
 
         # 검증 요청 정보 객체
         verifyObj = PassIdentityVerify(
@@ -103,7 +103,7 @@ def verifyIdentityHandler(request):
             receiverName = passcertService._encrypt('홍길동'),
         )
 
-        result = passcertService.verifyIdentity(clientCode, receiptId, verifyObj)
+        result = passcertService.verifyIdentity(clientCode, receiptID, verifyObj)
 
         return render(request, 'passcert/verifyIdentity.html', {'result': result})
     except BarocertException as PE:
@@ -183,9 +183,9 @@ def getSignStatusHandler(request):
         clientCode = '023040000001'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000016'
+        receiptID = '02304200230400000010000000000016'
 
-        result = passcertService.getSignStatus(clientCode, receiptId)
+        result = passcertService.getSignStatus(clientCode, receiptID)
 
         return render(request, 'passcert/getSignStatus.html', {'result': result})
     except BarocertException as PE:
@@ -201,7 +201,7 @@ def verifySignHandler(request):
         clientCode = '023040000001'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000016'
+        receiptID = '02304200230400000010000000000016'
 
         # 검증 요청 정보 객체
         verifyObj = PassSignVerify(
@@ -209,7 +209,7 @@ def verifySignHandler(request):
             receiverName = passcertService._encrypt('홍길동'),
         )
 
-        result = passcertService.verifySign(clientCode, receiptId, verifyObj)
+        result = passcertService.verifySign(clientCode, receiptID, verifyObj)
 
         return render(request, 'passcert/verifySign.html', {'result': result})
     except BarocertException as PE:
@@ -287,9 +287,9 @@ def getCMSStatusHandler(request):
         clientCode = '023040000001'
 
         # 자동이체 출금동의 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000023'
+        receiptID = '02304200230400000010000000000023'
 
-        result = passcertService.getCMSStatus(clientCode, receiptId)
+        result = passcertService.getCMSStatus(clientCode, receiptID)
 
         return render(request, 'passcert/getCMSStatus.html', {'result': result})
     except BarocertException as PE:
@@ -305,7 +305,7 @@ def verifyCMSHandler(request):
         clientCode = '023040000001'
 
         # 자동이체 출금동의 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000023'
+        receiptID = '02304200230400000010000000000023'
 
         # 검증 요청 정보 객체
         verifyObj = PassCMSVerify(
@@ -313,7 +313,7 @@ def verifyCMSHandler(request):
             receiverName = passcertService._encrypt('홍길동'),
         )
 
-        result = passcertService.verifyCMS(clientCode, receiptId, verifyObj)
+        result = passcertService.verifyCMS(clientCode, receiptID, verifyObj)
 
         return render(request, 'passcert/verifyCMS.html', {'result': result})
     except BarocertException as PE:
@@ -379,9 +379,9 @@ def getLoginStatusHandler(request):
         clientCode = '023040000001'
 
         # 간편로그인 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000023'
+        receiptID = '02304200230400000010000000000023'
 
-        result = passcertService.getLoginStatus(clientCode, receiptId)
+        result = passcertService.getLoginStatus(clientCode, receiptID)
 
         return render(request, 'passcert/getLoginStatus.html', {'result': result})
     except BarocertException as PE:
@@ -397,7 +397,7 @@ def verifyLoginHandler(request):
         clientCode = '023040000001'
 
         # 간편로그인 요청시 반환받은 트랜잭션 아이디
-        receiptId = '02304200230400000010000000000023'
+        receiptID = '02304200230400000010000000000023'
 
         # 검증 요청 정보 객체
         verifyObj = PassLoginVerify(
@@ -405,7 +405,7 @@ def verifyLoginHandler(request):
             receiverName = passcertService._encrypt('홍길동'),
         )
 
-        result = passcertService.verifyLogin(clientCode, receiptId, verifyObj)
+        result = passcertService.verifyLogin(clientCode, receiptID, verifyObj)
 
         return render(request, 'passcert/verifyLogin.html', {'result': result})
     except BarocertException as PE:

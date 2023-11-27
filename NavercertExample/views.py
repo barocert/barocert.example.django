@@ -62,9 +62,9 @@ def getIdentityStatusHandler(request):
         clientCode = '023090000021'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptId = '02311010230900000210000000000004'
+        receiptID = '02311010230900000210000000000004'
 
-        result = navercertService.getIdentityStatus(clientCode, receiptId)
+        result = navercertService.getIdentityStatus(clientCode, receiptID)
 
         return render(request, 'navercert/getIdentityStatus.html', {'result': result})
     except BarocertException as KE:
@@ -81,9 +81,9 @@ def verifyIdentityHandler(request):
         clientCode = '023090000021'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptId = '02311010230900000210000000000003'
+        receiptID = '02311010230900000210000000000003'
 
-        result = navercertService.verifyIdentity(clientCode, receiptId)
+        result = navercertService.verifyIdentity(clientCode, receiptID)
 
         return render(request, 'navercert/verifyIdentity.html', {'result': result})
     except BarocertException as KE:
@@ -146,9 +146,9 @@ def getSignStatusHandler(request):
         clientCode = '023090000021'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02311010230900000210000000000007'
+        receiptID = '02311010230900000210000000000007'
 
-        result = navercertService.getSignStatus(clientCode, receiptId)
+        result = navercertService.getSignStatus(clientCode, receiptID)
 
         return render(request, 'navercert/getSignStatus.html', {'result': result})
     except BarocertException as KE:
@@ -165,9 +165,9 @@ def verifySignHandler(request):
         clientCode = '023090000021'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02311010230900000210000000000005'
+        receiptID = '02311010230900000210000000000005'
 
-        result = navercertService.verifySign(clientCode, receiptId)
+        result = navercertService.verifySign(clientCode, receiptID)
 
         return render(request, 'navercert/verifySign.html', {'result': result})
     except BarocertException as KE:
@@ -239,9 +239,9 @@ def getMultiSignStateHandler(request):
         clientCode = '023090000021'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02311010230900000210000000000010'
+        receiptID = '02311010230900000210000000000010'
 
-        result = navercertService.getMultiSignStatus(clientCode, receiptId)
+        result = navercertService.getMultiSignStatus(clientCode, receiptID)
 
         return render(request, 'navercert/getMultiSignStatus.html', {'result': result})
     except BarocertException as KE:
@@ -257,9 +257,9 @@ def verifyMultiSignHandler(request):
         clientCode = '023090000021'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02311010230900000210000000000009'
+        receiptID = '02311010230900000210000000000009'
 
-        result = navercertService.verifyMultiSign(clientCode, receiptId)
+        result = navercertService.verifyMultiSign(clientCode, receiptID)
 
         return render(request, 'navercert/verifyMultiSign.html', {'result': result})
     except BarocertException as KE:

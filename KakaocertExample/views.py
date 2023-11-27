@@ -60,9 +60,9 @@ def getIdentityStatusHandler(request):
         clientCode = '023040000001'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000012'
+        receiptID = '02304200230400000010000000000012'
 
-        result = kakaocertService.getIdentityStatus(clientCode, receiptId)
+        result = kakaocertService.getIdentityStatus(clientCode, receiptID)
 
         return render(request, 'kakaocert/getIdentityStatus.html', {'result': result})
     except BarocertException as KE:
@@ -79,9 +79,9 @@ def verifyIdentityHandler(request):
         clientCode = '023040000001'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000012'
+        receiptID = '02304200230400000010000000000012'
 
-        result = kakaocertService.verifyIdentity(clientCode, receiptId)
+        result = kakaocertService.verifyIdentity(clientCode, receiptID)
 
         return render(request, 'kakaocert/verifyIdentity.html', {'result': result})
     except BarocertException as KE:
@@ -137,9 +137,9 @@ def getSignStatusHandler(request):
         clientCode = '023040000001'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000016'
+        receiptID = '02304200230400000010000000000016'
 
-        result = kakaocertService.getSignStatus(clientCode, receiptId)
+        result = kakaocertService.getSignStatus(clientCode, receiptID)
 
         return render(request, 'kakaocert/getSignStatus.html', {'result': result})
     except BarocertException as KE:
@@ -156,9 +156,9 @@ def verifySignHandler(request):
         clientCode = '023040000001'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000016'
+        receiptID = '02304200230400000010000000000016'
 
-        result = kakaocertService.verifySign(clientCode, receiptId)
+        result = kakaocertService.verifySign(clientCode, receiptID)
 
         return render(request, 'kakaocert/verifySign.html', {'result': result})
     except BarocertException as KE:
@@ -226,9 +226,9 @@ def getMultiSignStateHandler(request):
         clientCode = '023040000001'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000022'
+        receiptID = '02304200230400000010000000000022'
 
-        result = kakaocertService.getMultiSignStatus(clientCode, receiptId)
+        result = kakaocertService.getMultiSignStatus(clientCode, receiptID)
 
         return render(request, 'kakaocert/getMultiSignStatus.html', {'result': result})
     except BarocertException as KE:
@@ -244,9 +244,9 @@ def verifyMultiSignHandler(request):
         clientCode = '023040000001'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000022'
+        receiptID = '02304200230400000010000000000022'
 
-        result = kakaocertService.verifyMultiSign(clientCode, receiptId)
+        result = kakaocertService.verifyMultiSign(clientCode, receiptID)
 
         return render(request, 'kakaocert/verifyMultiSign.html', {'result': result})
     except BarocertException as KE:
@@ -310,9 +310,9 @@ def getCMSStatusHandler(request):
         clientCode = '023040000001'
 
         # 자동이체 출금동의 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000023'
+        receiptID = '02304200230400000010000000000023'
 
-        result = kakaocertService.getCMSStatus(clientCode, receiptId)
+        result = kakaocertService.getCMSStatus(clientCode, receiptID)
 
         return render(request, 'kakaocert/getCMSStatus.html', {'result': result})
     except BarocertException as KE:
@@ -328,9 +328,9 @@ def verifyCMSHandler(request):
         clientCode = '023040000001'
 
         # 자동이체 출금동의 요청시 반환받은 접수아이디
-        receiptId = '02304200230400000010000000000023'
+        receiptID = '02304200230400000010000000000023'
 
-        result = kakaocertService.verifyCMS(clientCode, receiptId)
+        result = kakaocertService.verifyCMS(clientCode, receiptID)
 
         return render(request, 'kakaocert/verifyCMS.html', {'result': result})
     except BarocertException as KE:
