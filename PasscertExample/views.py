@@ -20,7 +20,7 @@ passcertService.UseStaticIP = settings.UseStaticIP
 def requestIdentityHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 본인인증 요청정보 객체
         requestObj = PassIdentity(
@@ -72,10 +72,10 @@ def requestIdentityHandler(request):
 def getIdentityStatusHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptID = '02304200230400000010000000000012'
+        receiptID = '02304200230700000140000000000012'
 
         result = passcertService.getIdentityStatus(clientCode, receiptID)
 
@@ -92,10 +92,10 @@ def getIdentityStatusHandler(request):
 def verifyIdentityHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 본인인증 요청시 반환받은 접수아이디
-        receiptID = '02304200230400000010000000000012'
+        receiptID = '02304200230700000140000000000012'
 
         # 검증 요청 정보 객체
         verifyObj = PassIdentityVerify(
@@ -114,7 +114,7 @@ def verifyIdentityHandler(request):
 def requestSignHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 전자서명 요청정보 객체
         requestObj = PassSign(
@@ -180,10 +180,10 @@ def requestSignHandler(request):
 def getSignStatusHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptID = '02304200230400000010000000000016'
+        receiptID = '02304200230700000140000000000016'
 
         result = passcertService.getSignStatus(clientCode, receiptID)
 
@@ -198,10 +198,10 @@ def getSignStatusHandler(request):
 def verifySignHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 전자서명 요청시 반환받은 접수아이디
-        receiptID = '02304200230400000010000000000016'
+        receiptID = '02304200230700000140000000000016'
 
         # 검증 요청 정보 객체
         verifyObj = PassSignVerify(
@@ -220,7 +220,7 @@ def verifySignHandler(request):
 def requestCMSHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 자동이체 출금동의 요청정보 객체
         requestObj = PassCMS(
@@ -284,10 +284,10 @@ def requestCMSHandler(request):
 def getCMSStatusHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 자동이체 출금동의 요청시 반환받은 접수아이디
-        receiptID = '02304200230400000010000000000023'
+        receiptID = '02304200230700000140000000000023'
 
         result = passcertService.getCMSStatus(clientCode, receiptID)
 
@@ -302,10 +302,10 @@ def getCMSStatusHandler(request):
 def verifyCMSHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 자동이체 출금동의 요청시 반환받은 접수아이디
-        receiptID = '02304200230400000010000000000023'
+        receiptID = '02304200230700000140000000000023'
 
         # 검증 요청 정보 객체
         verifyObj = PassCMSVerify(
@@ -324,7 +324,7 @@ def verifyCMSHandler(request):
 def requestLoginHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 간편로그인 요청정보 객체
         requestObj = PassLogin(
@@ -376,10 +376,10 @@ def requestLoginHandler(request):
 def getLoginStatusHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 간편로그인 요청시 반환받은 접수아이디
-        receiptID = '02304200230400000010000000000023'
+        receiptID = '02304200230700000140000000000023'
 
         result = passcertService.getLoginStatus(clientCode, receiptID)
 
@@ -394,10 +394,10 @@ def getLoginStatusHandler(request):
 def verifyLoginHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
-        clientCode = '023040000001'
+        clientCode = '023070000014'
 
         # 간편로그인 요청시 반환받은 트랜잭션 아이디
-        receiptID = '02304200230400000010000000000023'
+        receiptID = '02304200230700000140000000000023'
 
         # 검증 요청 정보 객체
         verifyObj = PassLoginVerify(

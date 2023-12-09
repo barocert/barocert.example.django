@@ -6,10 +6,9 @@
     <fieldset class="fieldset1">
         <legend>{{ request.path }}</legend>
         <ul>
-            <li>접수 아이디 (ReceiptID) : {{ result.receiptID }}</li>
-            <li>이용기관 코드 (ClientCode) : {{ result.clientCode }}</li>
-            <li>상태 (State) : {{ result.state }}</li>
-            <li>서명만료일시 (ExpireDT) : {{ result.expireDT }}</li>
+            <li>receiptID (접수아이디) : {{ result.receiptID }}</li>
+            <li>scheme (앱스킴) : {{ result.scheme }}</li>
+            <li>marketUrl (앱다운로드) : {{ result.marketUrl }}</li>
         </ul>
     </fieldset>
 </div>
