@@ -37,7 +37,7 @@ def requestIdentityHandler(request):
             expireIn = 1000,
             
             # AppToApp 인증요청 여부
-            # true - AppToApp 인증방식, false - Talk Message 인증방식
+            # true - AppToApp 인증방식, false - 푸시(push) 인증방식
             # appUseYN = True,
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
             # deviceOSType = 'ANDROID',
@@ -123,7 +123,7 @@ def requestSignHandler(request):
             # token = navercertService._encrypt(navercertService._sha256_base64url('전자서명(단건) 요청 원문')),
 
             # AppToApp 인증요청 여부
-            # true - AppToApp 인증방식, false - Talk Message 인증방식
+            # true - AppToApp 인증방식, false - 푸시(push) 인증방식
             # appUseYN = True,
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
             # deviceOSType = 'ANDROID',
@@ -218,7 +218,7 @@ def requestMultiSignHandler(request):
             tokens = multiSignTokens,
             
             # AppToApp 인증요청 여부
-            # true - AppToApp 인증방식, false - Talk Message 인증방식
+            # true - AppToApp 인증방식, false - 푸시(push) 인증방식
             #appUseYN = True,
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
             #deviceOSType = 'ANDROID',
@@ -305,7 +305,7 @@ def requestCMSHandler(request):
             bankAccountBirthday = self.navercertService._encrypt('19700101'),    
 
             # AppToApp 인증요청 여부
-            # true - AppToApp 인증방식, false - Talk Message 인증방식
+            # true - AppToApp 인증방식, false - 푸시(push) 인증방식
             # appUseYN = True,
             # 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
             # AppToApp 방식 이용시, 호출할 URL
