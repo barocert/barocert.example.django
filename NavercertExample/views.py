@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from config import settings
 from barocert import NavercertService, NaverIdentity, BarocertException, \
-    NaverSign, NaverMultiSign, NaverMultiSignTokens
+    NaverSign, NaverMultiSign, NaverMultiSignTokens, NaverCMS
 
 # config/settings.py 인증정보(LinkID, SecretKey)를 이용해 설정
 # NavercertService 객체 인스턴스 생성
@@ -287,22 +287,22 @@ def requestCMSHandler(request):
             # 인증요청 메시지 제목
             reqTitle = '출금동의 요청 메시지 제목',
             # 인증요청 메시지
-            reqMessage = self.navercertService._encrypt('출금동의 요청 메시지'),
+            reqMessage = navercertService._encrypt('출금동의 요청 메시지'),
             # 고객센터 연락처 - 최대 12자
             callCenterNum = '1600-9854',
             # 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
 
             # 청구기관명
-            requestCorp = self.navercertService._encrypt('청구기관'),    
+            requestCorp = navercertService._encrypt('청구기관'),    
             # 출금은행명
-            bankName = self.navercertService._encrypt('출금은행'),    
+            bankName = navercertService._encrypt('출금은행'),    
             # 출금계좌번호
-            bankAccountNum = self.navercertService._encrypt('123-456-7890'),    
+            bankAccountNum = navercertService._encrypt('123-456-7890'),    
             # 출금계좌 예금주명
-            bankAccountName = self.navercertService._encrypt('홍길동'),    
+            bankAccountName = navercertService._encrypt('홍길동'),    
             # 출금계좌 예금주 생년월일
-            bankAccountBirthday = self.navercertService._encrypt('19700101'),    
+            bankAccountBirthday = navercertService._encrypt('19700101'),    
 
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - 푸시(push) 인증방식
