@@ -9,10 +9,10 @@ from barocert import PassCMS, PassIdentity, PassLogin, PassSign, \
 # PasscertService 객체 인스턴스 생성
 passcertService = PasscertService(settings.LinkID, settings.SecretKey)
 
-# 인증토큰 IP제한기능 사용여부, True-사용, False-미사용, 기본값(True)
+# 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
 passcertService.IPRestrictOnOff = settings.IPRestrictOnOff
 
-# 패스써트 API 서비스 고정 IP 사용여부, True-사용, False-미사용, 기본값(False)
+# 통신 IP 고정, true-사용, false-미사용, (기본값:false)
 passcertService.UseStaticIP = settings.UseStaticIP
 
 # 패스 이용자에게 본인인증을 요청합니다.

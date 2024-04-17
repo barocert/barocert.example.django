@@ -8,10 +8,10 @@ from barocert import NavercertService, NaverIdentity, BarocertException, \
 # NavercertService 객체 인스턴스 생성
 navercertService = NavercertService(settings.LinkID, settings.SecretKey)
 
-# 인증토큰 IP제한기능 사용여부, True-사용, False-미사용, 기본값(True)
+# 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
 navercertService.IPRestrictOnOff = settings.IPRestrictOnOff
 
-# 네이버써트 API 서비스 고정 IP 사용여부, True-사용, False-미사용, 기본값(False)
+# 통신 IP 고정, true-사용, false-미사용, (기본값:false)
 navercertService.UseStaticIP = settings.UseStaticIP
 
 # 네이버 이용자에게 본인인증을 요청합니다.
