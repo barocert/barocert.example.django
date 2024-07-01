@@ -22,6 +22,10 @@ def requestIdentityHandler(request):
         # 이용기관코드, 파트너 사이트에서 확인
         clientCode = '023070000014'
 
+        file = open("./barocert.pdf", 'rb')
+        target = file.read()
+        file.close()
+
         # 본인인증 요청정보 객체
         requestObj = PassIdentity(
 
@@ -115,6 +119,10 @@ def requestSignHandler(request):
     try:
         # 이용기관코드, 파트너 사이트에서 확인
         clientCode = '023070000014'
+    
+        # file = open("./barocert.pdf", 'rb')
+        # target = file.read()
+        # file.close()
 
         # 전자서명 요청정보 객체
         requestObj = PassSign(
@@ -134,13 +142,16 @@ def requestSignHandler(request):
             callCenterNum = '1600-9854',
             # 전자서명 만료시간 - 최대 1,000(초)까지 입력 가능
             expireIn = 1000,
-            # 서명 원문 - 최대 2,800자 까지 입력가능
-            token = passcertService._encrypt('전자서명 요청 원문'),
-            
             # 서명 원문 유형
             # 'TEXT' - 일반 텍스트, 'HASH' - HASH 데이터, 'URL' - URL 데이터
             # 원본데이터(originalTypeCode, originalURL, originalFormatCode) 입력시 'TEXT'사용 불가
             tokenType = 'URL',
+            # 서명 원문 - 최대 2,800자 까지 입력가능
+            token = passcertService._encrypt('전자서명 요청 원문'),
+            # 서명 원문 유형
+            # tokenType = 'PDF',
+            # 서명 원문 유형이 PDF인 경우, 원문은 SHA-256, Base64 URL Safe No Padding을 사용
+            # token = passcertService._encrypt(passcertService._sha256_base64url_file(target)),
             
             # 사용자 동의 필요 여부
             userAgreementYN = True,
