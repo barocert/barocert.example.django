@@ -118,15 +118,13 @@ def requestSignHandler(request):
             expireIn = 1000,
             # 서명 원문 유형
             # TEXT - 일반 텍스트, HASH - HASH 데이터
-            # tokenType = 'TEXT',
+            tokenType = 'TEXT',
             # 서명 원문 - 최대 2,800자 까지 입력가능
-            # token = kakaocertService._encrypt('전자서명(단건) 요청 원문'),
+            token = kakaocertService._encrypt('전자서명(단건) 요청 원문'),
             # 서명 원문 유형
             # tokenType = 'PDF',
             # 서명 원문 유형이 PDF인 경우, 원문은 SHA-256, Base64 URL Safe No Padding을 사용
             # token = kakaocertService._encrypt(kakaocertService._sha256_base64url_file(target)),
- 
-            
             
             # AppToApp 인증요청 여부
             # true - AppToApp 인증방식, false - Talk Message 인증방식
