@@ -5,7 +5,7 @@ import os
 """
 Barocert PASS API Java SDK JSP Example
 
-업데이트 일자 : 2024-06-30
+업데이트 일자 : 2025-02-24
 연동기술지원 연락처 : 1600-9854
 연동기술지원 이메일 : code@linkhubcorp.com
         
